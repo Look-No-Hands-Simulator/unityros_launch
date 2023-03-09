@@ -1,9 +1,13 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+import socket
+
+hostname = socket.gethostname()
+IPAddr = socket.gethostbyname(hostname)
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('ROS_IP', default_value='YOURIPHERE', description='IP of machine running ROS2.'),
+        DeclareLaunchArgument('ROS_IP', default_value=IPAddr, description='IP of machine running ROS2.'),
         Node(
             package='unity_robotics_demo',
             namespace='',
