@@ -9,6 +9,6 @@ setup(
     data_files=[
         # ... Other data files
         # Include all launch files.
-        (os.path.join('share', package_name), glob('launch/unityros_launch.py'))
+        (os.path.join('share', package_name), glob('launch/unityros.launch.py'))
     ]
 )

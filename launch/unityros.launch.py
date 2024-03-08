@@ -29,6 +29,11 @@ def generate_launch_description():
             package='ros_tcp_endpoint',
             executable='default_server_endpoint',
             name='server_endpoint'
+        ),
+        Node(
+            package='unity_robotics_demo',
+            executable='color_publisher',
+            name='color_publisher'
         )
     ])
 
